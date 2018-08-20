@@ -1,0 +1,67 @@
+div#calc.calc
+
+	p.calc-title Калькулятор
+	p Самостоятельно рассчитайте стоимость аренды, и Вы поймете, что это совсем не дорого !
+
+	div#calc-anchor-popup.main-field
+
+
+		div#service-type.input-field
+			span.input-field__title Тип съемки
+			span.input-field__title.input-field__title--hidden Тип съемки
+			span.input-field__title--value Фото
+
+			ul.list-labels
+				li(data-service-type = 'photo') Фото
+				li(data-service-type = 'video') Фото/Видео
+				li(data-service-type = 'instustiral') Промышленная
+
+		div#time.input-field
+			span.input-field__title Продолжительность аренды
+			span.input-field__title.input-field__title--hidden Арендуем на
+			span.input-field__title--value
+
+			ul#time-labels.list-labels
+				li(data-time='1' data-percent='0' data-photo-del-price = '1990' data-photo-price = '1990' data-video-del-price = '3990' data-video-price = '8990' data-industrial-del-price = '8990' data-industrial-price = '8990') 1 час
+				li(data-time='2' data-percent='25' data-photo-del-price = '3980' data-photo-price = '3480'  data-video-del-price = '7980' data-video-price = '6980' data-industrial-del-price = '17980' data-industrial-price = '16650') 2 часа
+				li(data-time='3' data-percent='30' data-photo-del-price = '5970' data-photo-price = '4870'  data-video-del-price = '11970' data-video-price = '9780' data-industrial-del-price = '26970' data-industrial-price = '23850') 3 часа
+				li(data-time='4' data-percent='35' data-photo-del-price = '7960' data-photo-price = '6160'  data-video-del-price = '15960' data-video-price = '12380' data-industrial-del-price = '35960' data-industrial-price = '30600') 4 часа
+				li(data-time='5' data-percent='45' data-photo-del-price = '9950' data-photo-price = '7360'  data-video-del-price = '19950' data-video-price = '14580' data-industrial-del-price = '44950' data-industrial-price = '36450') 5 часов
+				li(data-time='6' data-percent='55' data-photo-del-price = '11940' data-photo-price = '8250'  data-video-del-price = '23950' data-video-price = '16380' data-industrial-del-price = '53940' data-industrial-price = '41390') 6 часов
+				li(data-time='all' data-percent='65' data-photo-del-price = '13930' data-photo-price = '8950'  data-video-del-price = '27950' data-video-price = '17990' data-industrial-del-price = '63000' data-industrial-price = '45400') Весь день
+
+		div#distance.input-field
+			span.input-field__title Дальность
+			span.input-field__title.input-field__title--hidden Вжух на
+			span.input-field__title--value
+
+			ul#distance-labels.list-labels
+				li(data-distance) 50 метров
+				li(data-distance) 1 км
+				li(data-distance) 100 км
+
+		div.calculate
+			a#calc-btn.calc__btn Рассчитать
+			div.calculate__field Итого:
+				span.price--deleted
+				span.price
+	
+	div.calc-call-to-action
+		p Отлично! Вы выбрали оптимальную стоимость аренды.
+		p Теперь дело за нами. Оставьте номер телефона и мы бесплатно подготовим техническое задание.
+		form#calc-call-to-action__form.calc-call-to-action__form
+			div.arrow__wrapper
+				img.arrow--blue(src="./img/subscribeArrow.svg", alt="")
+			input#calc-phone(type="tel" name="phone" required)
+			button(type='submit') Отправить
+
+			input(type="hidden" id = 'calc-chosen-type' name='calc-chosen-type' value='')
+			input(type="hidden" id = 'calc-chosen-price' name='calc-chosen-type' value='')
+			input(type="hidden" id = 'calc-chosen-time' name='calc-chosen-time' value='')
+			input(type="hidden" id = 'calc-chosen-percent' name='calc-chosen-percent' value='')
+
+div#popup-main-page--success
+	div.popup-main-page--success
+		p Поздравляем! Ваша заявка успешно отправлена
+		p Наш специалист свяжется с Вами в ближайшее время для обсуждения деталей технического задания
+		p В ожидании звонка Вы можете ознакомиться с многообразием товаров и услуг, предоставляемых <a href='https://copterdrone.ru/' target='_blank'>нашей&#160;компанией</a>

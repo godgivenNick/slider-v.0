@@ -1,0 +1,412 @@
+body {
+	.f-col;
+	align-items: center;
+}
+.calc {
+	width: 100%;
+	max-width: 500px;
+
+	.f-col;
+	-webkit-align-items: center;
+	        align-items: center;
+	
+	// border: 2px solid @brand-sky-blue;
+	border-radius: 15px;
+	box-shadow: 0 2px 9px 0px #5c5c6b;
+	background-color: rgba(255,255,255, 1);
+	
+	padding: 10px 15px;
+
+	position: absolute;
+	top: 300px;
+	z-index: 999;
+}
+
+.calc-title {
+	font-size: 22px;
+	color: #595d65;
+
+	margin-bottom: 10px;
+	text-align: center;
+
+	& + p {
+		color: #595d65;
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+
+// до изменения
+.main-field {
+	width: 100%;
+	max-width: 450px;
+
+	// min-height: 300px;
+
+	.f-col;
+	align-items: center;
+	
+	// z-index: 10;
+}
+
+.input-field {
+	margin-bottom: 20px;
+	position: relative;
+
+	width: 100%;
+	.f-row;
+	-webkit-align-items: center;
+	        align-items: center;
+
+	padding: 0 30px;
+	height: 40px;
+	
+	// border: 2px solid @brand-sky-blue;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	box-shadow: 0 0px 3px 0 #bebebe;
+
+	
+	cursor: pointer;
+	font-size: 16px;
+	background-color: white;
+	
+	-webkit-transition: .3s ease ;
+	-o-transition: .3s ease ;
+	transition: .3s ease ;
+
+	&:hover {
+		background-color: #b8daf2;
+	}
+}
+
+.input-field__title {
+	position: relative;
+	text-align: left;
+	color: #3c4048;
+	pointer-events: none;
+}
+
+.input-field__title--hidden {
+	display: none;
+}
+
+.input-field__title--value {
+	position: absolute;
+	right: 30px;
+	color: @brand-sky-blue;
+}
+.list-labels {
+	// border: 2px solid @brand-sky-blue;
+	border-top: none;
+
+	display: flex;
+	flex-direction: column;
+	-webkit-align-items: center;
+	        align-items: center;
+	box-shadow: 0 0px 3px 0 #bebebe;
+
+	position: absolute;
+	overflow: hidden;
+	top: 40px;
+	right: 0px;
+	// z-index: 1;
+	width: calc(100%);
+	height: 0px;
+	opacity: 0;
+	max-height: 120px;
+}
+#time-labels {
+	overflow-y: scroll;
+}
+
+
+.list-labels li {
+	cursor: pointer;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #4e5259;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: white;
+
+	&:hover {
+		background-color: #b8daf2;
+	}
+}
+
+.percent-modal {
+	pointer-events: none;
+	width: 150px;
+	height: 30px;
+
+
+	.f-row;
+	align-items: center;
+	justify-content: center;
+
+	// border: 1px solid @brand-sky-blue;
+	border-radius: 20px;
+
+	position: absolute;
+	left: 35%;
+
+	p {
+		font-size: 16px;
+		font-weight: 500;
+		// color: #ffd829;
+		color: @brand-dirty-black;
+
+		span {
+			font-size: 18px;
+			// color: #f06e23;
+			font-weight: 900;
+		}
+	}
+}
+
+
+.calculate {
+	width: 100%;
+	.f-row;
+	align-items: center;
+	justify-content: flex-start;
+
+}
+
+.calc__btn {
+	cursor: pointer;
+
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 2;
+
+
+	color: white;
+	background-color: @brand-sky-blue;
+	border: 2px solid @brand-sky-blue;
+	border-radius: 25px;
+
+	padding: 0 30px;
+
+	transition: .4s ease;
+	&:hover {
+		background-color: white;
+		color: @brand-sky-blue;
+	}
+}
+
+// .calc__btn, .calculate__field {
+// 	width: 48%;
+// }
+
+// .calculate__field {
+// 	width: 48%;
+// }
+
+.calculate__field {
+	height: 50px;
+	margin-left: 15px;
+	font-size: 22px;
+	color: #595d65;
+
+	.f-row;
+	align-items: center;
+	justify-content: flex-start;
+
+	opacity: 1;
+}
+
+
+.price--deleted {
+	font-size: 14px;
+	color: #f06e23;
+	margin-left: 10px;
+	margin-top: 7px;
+
+	text-decoration: line-through;
+}
+
+.price {
+	margin-left: 10px;
+	color: @brand-sky-blue;
+}
+
+.price, .price--deleted {
+	opacity: 0;
+}
+
+// убрать поинт листенеры
+	.arrow__wrapper,
+	.arrow__wrapper img,
+	 {
+		pointer-events: none;
+	}
+
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+// call to action
+	
+.calc-call-to-action {
+	margin-top: 15px;
+	width: 100%;
+	.f-col;
+	align-items: center;
+	color: #595d65;
+
+	height: 0;
+	opacity: 0;
+	transition: 2s ease-out;
+
+	p {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	input[type='tel'] {
+		align-self: center;
+		width: 300px;
+		font-size: 20px;
+		line-height: 40px;
+		color: #595d65;
+
+		border: 1px solid #ea6b22;
+		border-radius: 20px;
+
+		padding: 0 20px;
+		margin-bottom: 15px;
+	}
+
+	button {
+		cursor: pointer;
+		align-self: center;
+		width: 200px;
+		background: linear-gradient(to right,#f99b0e 0%,#ea6b22 100%);
+		font-size: 22px;
+		line-height: 2.5;
+		padding: 0 30px;
+		color: white;
+		border-radius: 30px;
+		border: 2px solid;
+
+		transition: .4s ease;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+	}
+}
+
+.calc-call-to-action__form {
+	width: 100%;
+	.f-col;
+
+	position: relative;
+}
+.arrow__wrapper {
+	position: absolute;
+	right: 20px;
+	top: -30px;
+	transform: scaleX(-1) rotate(-50deg);
+}
+.arrow--blue {
+	transform: scale(3);
+}
+
+// -------------------------------------------
+// success
+
+	#popup-main-page--success {
+		width: 100%;
+		max-width: 800px;
+
+		//
+		display: none;
+		//
+	
+		cursor: default!important;
+	}
+	.popup-main-page--success {
+		width: 100%;
+		padding: 30px;
+		background-color: white;
+	
+		.f-col;
+		align-items: center;
+
+		p {
+			font-size: 26px;
+			line-height: 1.2;
+			text-align: center;
+			font-weight: 500;
+			margin-bottom: 10px;
+		
+			color: #43413f;
+		}
+		p:nth-child(2) {
+			font-size: 18px;
+			font-weight: 400;
+		}
+
+		p:nth-child(3) {
+			font-size: 18px;
+			font-weight: 400;
+
+			a {
+				position: relative;
+				cursor: pointer;
+				transition: .4s ease-out;
+
+				&::before {
+					position: absolute;
+					content: '';
+					background-color: #43413f;
+					height: 1px;
+					width: 100%;
+					bottom: 0px;
+					left: 0;
+
+					transition: .4s ease-out;
+				}
+
+				&:hover {
+					color: #1ba0ff;
+
+					&::before {
+						background-color: #1ba0ff;
+					}
+				}
+			}
+		}
+	}
+
+@media screen and (max-width: 768px) {
+	.calc {
+		max-width: 450px;
+	}
+	.calc__btn {
+		width: auto;
+		padding: 0 30px;
+	}
+	.calculate__field {
+		width: 100%;
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.calc {
+		top: 340px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.calc {
+		max-width: calc( 100% - 30px);
+	}
+}

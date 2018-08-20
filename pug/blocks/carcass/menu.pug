@@ -1,0 +1,46 @@
+header#menu.menu
+	div.container.menu__container
+
+		div.menu-top
+			p.menu-top__text.menu-top__text--shop Магазин <a href='https://copterdrone.ru/' target='_blank'>Copterdrone.ru</a>
+			p.menu-top__text.menu-top__text--everyday Работаем ежедневно с 9:00 до 22:00
+			p.menu-top__text.menu-top__text--address СПб, Лиговский 50, к.16, оф. 122
+			a(href="tel: 88126482237") тел: <span>8 (812) 648-22-37 </span>
+
+		div.menu-bot
+			nav.nav-menu
+				div.nav-menu__toggler
+					span
+				ul.nav-menu__list
+					li.nav-menu__item
+						a(href="#service-list" ) Услуги
+					li.nav-menu__item
+						a(href="#private-block") Частная
+					li.nav-menu__item
+						a(href="#industrial-block") Промышленная
+					li.nav-menu__item
+						a(href="#reason") Почему мы
+					//- li.nav-menu__item
+					//- 	a(href="") Портфолио
+					li.nav-menu__item
+						a(href="#form-anchor") Контакты
+
+			a.logo(href="https://copterdrone.ru/bespilotniki_bpla/arenda_kvadrocoptera/") CopterRent
+			p.logo-after--hidden &#8470;1 в Санкт&#160;-&#160;Петербурге<br> по аренде квадрокоптеров
+			a.callback-btn.menu-bot__callback-btn( type="button" data-src="#popup-callback" data-fancybox ) Заказать звонок
+
+div#popup-callback
+	div.popup-callback
+		p.popup-callback__title Закажите <span>бесплатный</span> звонок для консультации
+		p.popup-callback__text Оставьте свой номер, и наш специалист свяжется с Вами в ближайшее время
+		form#popup-callback-form.popup-callback-form
+
+			div.popup-callback__field
+				input#popup-callback--phone(type="tel" name="phone")
+				label(for="popup-callback--phone") Ваш номер телефона:
+
+			button(type="submit") Заказать
+
+	div.popup-callback--success
+		p Отлично! Ваша заявка успешно отправлена
+		p В ожидании звонка оператора Вы можете ознакомиться с многообразием товаров и услуг, предоставляемых <a href='https://copterdrone.ru/' target='_blank'>нашей&#160;компанией</a>

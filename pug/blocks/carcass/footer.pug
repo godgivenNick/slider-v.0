@@ -1,0 +1,48 @@
+footer
+	p.title.fs-title.footer__title <a href="#" title="Autocartex.ru"> Scooterspace.ru</a> - гарантированное качество по выгодной цене
+
+	section#contacts.contacts
+		div.contacts__container
+			p.title.fs-title.contacts__title Контакты
+
+			div.contacts__wrapper
+
+				div.contacts-l
+
+					div.phone
+						img(src="./img/contacts-item-1.png", alt="")
+						div.phone__wrapper
+							a(href="tel: 88129563258").fs-title.title 8(812)956-32-58
+
+					div.spb
+						img(src="./img/contacts-item-2.png", alt="")
+						p.fs-medium.title Санкт-Петербург </br> Лесной проспект, 69
+					div.spb
+						img(src="./img/contacts-item-2.png", alt="")
+						p.fs-medium.title Санкт-Петербург </br> Проспект стачек, 6
+					div.spb
+						img(src="./img/contacts-item-2.png", alt="")
+						p.fs-medium.title Санкт-Петербург </br> Лиговский проспект, 50
+
+				div.contacts-r
+					p.title.fs-title Остались вопросы? </br> <span> Свяжитесь с нами </span>
+
+					form#contacts-form.contacts-form
+						div.contacts-form__wrapper
+							input(type="text" id="contacts-form-name")
+							label.label-for-input(for="contacts-form-name") Ваше имя:
+						div.contacts-form__wrapper
+							input(type="text" id="contacts-form-phone" name="phone")
+							label.label-for-input(for="contacts-form-phone") Ваш номер телефона *:
+						div.contacts-form__wrapper.text-area
+							textarea(id="contacts-form-comment" name="contacts-form-comment")
+							label.label-for-text(for="contacts-form-comment") Ваш вопрос:
+						p.contacts-form__text--success Заявка успешно отправлена.</br>Пожалуйста, дождитесь звонка оператора.
+						button.contacts-form__btn(type="submit" id=".contacts-form-btn") Отправить сообщение
+
+						input(type="hidden" name="callback" id="callback3" value="callback3")
+
+	footer
+		p © scooterspace.ru, 2018. Все права защищены
+		a(href="https://sgholding.ru/privacy_policy.pdf" target="_blank") Политика конфиденциальности
+		

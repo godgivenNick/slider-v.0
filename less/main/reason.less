@@ -1,0 +1,190 @@
+.reason {
+	width: 100%;
+	.f-col;
+	align-items: center;
+
+	position: relative;
+}
+
+#reason-abstraction {
+	width: 100%;
+	height: ;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+	z-index: 1;
+}
+
+.reason__container {
+	.f-col;
+	align-items: center;
+
+	//
+	// padding: 100px 0;
+	//
+	padding: 50px 0;
+
+}
+
+.reason__title {
+	font-size: 50px;
+	font-weight: 400;
+    color: #595d65;
+    text-shadow: 2px 0px 4px #d8d5d5;
+
+	margin-bottom: 25px;
+}
+
+.bullet {
+	width: 100%;
+
+	.f-row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+
+.bullet-item {
+	width: 22%;
+	height: 200px;
+	.f-col;
+
+	align-items: center;
+	justify-content: center;
+
+	//
+	position: relative;
+	z-index: 999;
+	// background-color: white;
+	//
+}
+
+.bullet-item__img {
+	height: 100px;
+	width: auto;
+	.f-col;
+	align-items: center;
+	justify-content: flex-end;
+
+	// border: 1px solid @brand-sky-blue;
+}
+
+#bullet-pilot {
+	.bullet-item__img {
+		justify-content: center;
+	}	
+	img { 
+		max-width: 100px;
+		height: auto;
+	}
+}
+#bullet-3d {
+	img {
+		width: 100%;
+		max-width: 150px;
+		height: auto;
+	}
+}
+#bullet-inf {
+	
+	.bullet-item__img {
+		justify-content: center;
+	}
+	img { 
+		width: 100%;
+		max-width: 150px;
+		height: auto;
+
+		max-width: 120px;
+		height: 70px;
+
+	}
+}
+#bullet-time {
+	img { 
+		max-width: 90px;	
+		height: 90;
+	}
+}
+
+
+.bullet-item__text {
+	margin-top: auto;
+	font-size: 22px;
+	color: rgba(52,55,69,1);
+	line-height: 1;
+	font-weight: 300;
+	text-align: center;
+}
+
+.pilot-profit {
+	box-shadow: 0 2px 30px 2px rgba(0,0,0,.4);
+	width: 100%;
+	.f-col;
+	align-items: center;
+	background: url('../img/bg-reason-1.jpg') no-repeat center top;
+	height: 500px;
+
+	.reason__title {
+		color: white;
+		text-shadow: 2px 0 15px #585454;
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+	ul {
+		width: 100%;
+		max-width: 800px;
+		.f-col;
+		align-items: flex-start;
+
+		li {
+			margin-left: 40px;
+			font-size: 24px;
+			font-weight: 400;
+			margin-bottom: 25px;
+			color: #e7e1e1;
+			text-shadow: 2px 0 15px #444343;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: '';
+				left: -40px;
+				top: 4px;
+				width: 21px;
+				height: 21px;
+				border: 2px solid #1ba0ff;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				left: -34px;
+				top: 10px;
+				width: 9px;
+				height: 9px;
+				background-color: white;
+				border-radius: 1px;
+			}
+
+		}
+	}
+}
+.pilot-profit__container {
+	width: 100%;
+	max-width: 1200px;
+
+	.f-col;
+	align-items: flex-start;
+
+	// border: 1px solid yellow;
+
+	padding: 0 15px;
+}
+

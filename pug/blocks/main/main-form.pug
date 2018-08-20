@@ -1,0 +1,31 @@
+section#form-anchor.form
+	div.form__container
+		p.form__title Готовы арендовать квадрокоптер?
+		p.form__text Тогда оставьте нам свои контактные данные и мы свяжемся с Вами в ближайшее время. 
+
+		form.main-form#form(action="main-form.php" method="post")
+
+			div.form-item
+				p.form__label Представьтесь, пожалуйста:
+				div.form__wrapper
+					input#name(type="text" name="name")
+
+			div.form-item
+				p.form__label Ваш телефон:
+				div.form__wrapper
+					input#phone(type="tel" name="phone" required)
+
+			div.form-item
+				p.form__label Ваш Email:
+				div.form__wrapper
+					input#email(type="email" name="email")
+
+			
+			label.label-checkbox
+				input.radio(type="checkbox" id="agree" name="agree" value="agree" checked required)
+				span.radio-custom
+				p.radio-label Я даю согласие на обработку моих персональных данных, с политикой конфиденциальности ознакомлен(-на).
+			p.success-text Поздравляем, Ваша заявка успешно отправлена!</br><span> Наш оператор свяжется с Вами в ближайшее время для уточнения деталей. </span>
+			button.main-form__btn(name="submit" type="submit" id="submit") Отправить
+
+			input#type(type="hidden" name="type" value="2")

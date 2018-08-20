@@ -1,0 +1,145 @@
+.promo {
+	width: 100%;
+	height: 600px;
+
+	background-image: url('../img/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: 25% center;
+	background-size: auto 100%;
+
+	.f-col;
+	align-items: center;
+
+	position: relative;
+
+	// margin-bottom: 350px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+
+	// border: 1px solid red;
+
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.promo__container {
+	height: 100%;
+
+	.f-col;
+	align-items: flex-start;
+
+}
+
+.promo-text {
+	width: 80%;
+
+	height: 100%;
+
+	.f-col;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	// border: 1px solid white;
+
+	text-align: left;
+
+	padding-left: 20px;
+
+}
+
+h1, .promo-text__pod-offer {
+
+	line-height: 1;
+}
+
+h1 {
+	font-size: 50px;
+	color: white;
+
+	//
+	margin: 40px 0 30px;
+	//
+
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -20px;
+		top: 0;
+		height: 100%;
+		width: 4px;
+		background-color: #1ba0ff;
+	}
+}
+
+
+.promo-text__pod-offer {
+	color: @brand-dirty-white;
+
+	font-size: calc(45px * .65);
+	font-size: 26px;
+	font-weight: 300;
+	max-width: 60%;
+
+	//
+	margin-bottom: 20px;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	//
+}
+
+
+
+///////////////////////////////////////////////////////////
+// media
+@media screen and (max-width: 1200px) {
+	.container {
+		max-width: 100%;
+	}
+
+	.promo {
+		background-position: 50% center;
+	}
+
+	.promo-text {
+		width: 100%;
+		padding: 0;
+	}
+
+	h1 {
+		margin: 50px 0 25px 0;
+	}
+
+	.promo-text__pod-offer {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 36px;
+	}
+	.promo-text__pod-offer {
+		font-size: 24px;
+	}
+	.promo {
+		background-position: 60% center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 550px) {
+
+}
+
+
+@media screen and (max-width: 450px) {
+	
+}

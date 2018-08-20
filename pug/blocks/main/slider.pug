@@ -1,0 +1,20 @@
+section#slider.slider
+	div.slider__container
+		//- div.slider-zone
+
+			//- div.slider-box.left.hide
+			//- div.slider-box.left.back
+			//- div.slider-box.front
+			//- div.slider-box.right.back
+			//- div.slider-box.right.hide
+
+		div.slider-zone
+			div.slider-box
+				iframe(height="400px" src="https://www.youtube.com/embed/UI4Ky0z4Q6Y?showinfo=0", frameborder="0" allowfullscreen="" allow="autoplay; encrypted-media")
+			div.slider-box
+				iframe(height="400px" src="https://www.youtube.com/embed/S5mxvU1YVm8", frameborder="0" allowfullscreen="" allow="autoplay; encrypted-media")
+			div.slider-box
+				iframe(height="400px" src="https://www.youtube.com/embed/PAwC6gpImyY", frameborder="0" allowfullscreen="" allow="autoplay; encrypted-media")
+
+		a(type='button' id='prev' onclick='REV.previous()') Prev
+		a(type='button' id='next' onclick='REV.next()') Next

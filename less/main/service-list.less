@@ -1,0 +1,384 @@
+.service-list {
+	width: 100%;
+
+	.f-col;
+	align-items: center;
+
+	background-color: #f5fdfe;
+
+	overflow: hidden;
+
+	padding-bottom: 50px;
+}
+
+.service-list__container {
+	width: 100%;
+	.f-row;
+	justify-content: space-between;
+	//border: 1px solid red;
+	background-color: #f5fdfe;
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+.service-list-item {
+	background-color: white;
+	width: calc(33% - 20px);
+
+	.f-col;
+	align-items: center;
+	justify-content: space-between;
+
+	box-shadow: 0 3px 9px 0 #bebebe;
+	box-shadow: 0 0px 7px 2px #e3e3e3;
+
+	transition: .4s ease;
+
+	height: 640px;
+
+	&:nth-of-type(2) {
+		transform: translateY(-20px);
+		height: calc(640px + 40px);
+		padding-bottom: 20px;
+
+	}
+
+	&:hover {
+		// transform: translate(0, -40px);
+		box-shadow: 0 0 5px 1px #5c666d;
+	}
+}
+
+.service-list-item__container {
+	// min-height: 500px;
+	width: calc(100% - 20px);
+		.f-col;
+	align-items: center;
+
+	padding-bottom: 20px;
+	//border: 1px solid black;
+}
+
+.gg {
+	padding-bottom: 0;
+}
+
+.img-wrapper {
+	//border: 1px solid yellow;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+	.f-col;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 320px;
+	}
+
+}
+
+.service-list-item__title {
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+	color: @brand-sky-blue;
+
+	padding: 5px 0;
+	// border-bottom: 1px solid #e3e3e3;
+}
+
+.servis-list-item-table {
+	width: 100%;
+	.f-col;
+	align-items: center;
+
+	padding: 15px 0;
+
+	border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #e3e3e3;
+}
+
+.servis-list-item-table__text {
+	width: 100%;
+	.f-row;
+	align-items: flex-start;
+
+	font-size: 14px;
+
+	margin-bottom: 10px;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	p:first-child {
+		width: 60%;
+	}
+
+	p:last-child {
+		width: 40%;
+	}
+}
+
+
+
+.service-list-item__price {
+	font-size: 18px;
+	color: black;
+	font-weight: 400;
+
+	span {
+		font-size: 20px;
+		color: @brand-sky-blue;
+	}
+}
+
+.orderBtn {
+	font-size: 22px;
+	color: white;
+	background-color: @brand-sky-blue;
+	background: linear-gradient(to right,#f99b0e 0%,#ea6b22 100%);
+	line-height: 2.5;
+	text-align: center;
+	padding: 0 50px;
+
+	cursor: pointer;
+
+	border-radius: 30px;
+
+	transition: all .4s ease;
+	// transition: font-size 0s;
+
+	&:hover {
+		// background-color: ;
+		transform: scale(1.05);
+	}
+}
+
+
+
+// service-calc
+	.service__hour-price {
+		width: 100%;
+		.f-row;
+		align-items: center;
+		justify-content: center;
+
+		// margin-left: 50px;
+		// padding-left: 50px;
+		margin-bottom: 10px;
+	}
+	.service__input-field {
+		width: 100px;
+		height: 30px;
+
+		text-align: center;
+		line-height: 30px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 0px #585660;
+
+		position: relative;
+		transition: .4s ease;
+		&:hover {
+			background-color: #b8daf2;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 5px;
+			top: 0px;			
+
+			width: 10px;
+			height: 10px;
+			// background-color: grey;
+			// transform: rotate(45deg);
+			border: 5px solid transparent;
+			border-left: 5px solid grey;
+			transform: rotate(-90deg);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			right: 5px;
+
+			bottom: 0px;
+
+			width: 10px;
+			height: 10px;
+			// background-color: grey;
+			// transform: rotate(45deg);
+			border: 5px solid transparent;
+			border-right: 5px solid grey;
+			transform: rotate(-90deg);
+		}
+
+		cursor: pointer;
+	}
+
+	.service__list-labels {
+		width: 100%;
+		position: absolute;
+		.f-col;
+		align-items: center;
+
+		top: 30px;
+		left: 0;
+		height: 0;
+		max-height: 120px;
+		opacity: 0;
+		overflow-y: scroll;
+
+		border-radius: 5px;
+		box-shadow: 0 0 5px 0px #585660;
+
+		background-color: white;
+
+		li {
+			width: 100%;
+			&:hover {
+				background-color: #b8daf2;
+			}
+		}
+	}
+	.service__hour-price--price {
+		margin-left: 10px;
+		font-size: 22px;
+		line-height: 30px;
+		color: #f06e23;
+	}
+
+	.service-list-item__desc {
+		margin-bottom: 20px;
+	}
+
+
+.service-list-item {
+	position: relative;
+}
+.share {
+	display: flex;
+	padding: 10px 15px;
+	width: 100%;
+	position: absolute;
+	bottom: -75px;
+
+	text-align: center;
+	font-size: 22px;
+	font-weight: 400;
+	color: #f06e23;
+
+	border: 1px solid #f06e23;
+	background-color: white;
+	// box-shadow: 0 2px 2px 0px #f06e23;
+
+	opacity: 0;
+}
+
+
+// popup
+
+	#service-list-popup {
+		display: none;
+	}
+	.service-list-popup {
+		cursor: default!important;
+		max-width: 600px;
+		min-width: 300px;
+		// padding: 30px;
+		.f-col;
+		align-items: center;
+
+		background-color: white;
+	}
+
+	.service-list-popup__service-type, .service-list-popup__service-hours, .service-list-popup__service-price {
+		width: 100%;
+		font-size: 22px;
+		font-weight: 400;
+		text-align: center;
+		color: #595d65;
+	}
+
+
+
+	.service-list-popup__service-price + span{
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.service-list-popup-form {
+		width: 100%;
+		align-items: center;
+		.f-col;
+
+		input {
+			margin-top: 20px;
+			width: 100%;
+			width: 300px;
+			line-height: 50px;
+			font-size: 22px;
+
+			padding: 0 30px 0 30px;
+			color: #595d65!important;
+			border-radius: 25px;
+			box-shadow: 0 0 3px 0px #ea6b22;
+		}
+
+		button[type="submit"] {
+			margin-top: 20px;
+			line-height: 50px;
+			font-size: 25px;
+			text-align: center;
+			width: 300px;
+			color: white;
+			background: linear-gradient(to right,#f99b0e 0%,#ea6b22 100%);
+			border-radius: 25px;
+			cursor: pointer;
+			&:hover {
+
+			}
+		}
+
+	}
+
+	.service-list-popup-form__title {
+		font-size: 22px;
+		color: #595d65;
+	}
+
+	.service-list-popup--value {
+		font-size: 28px;
+		color: #43413f;
+		line-height: 1.5;
+	}
+
+	.service-list-popup--success {
+		// display: flex;
+    	flex-flow: column nowrap;
+   		align-items: center;
+		max-width: 800px;
+		display: none;
+
+		p {
+			font-size: 22px;
+			color: #595d65;
+			text-align: center;
+		}
+	}
+
+
+/////////////////////////////
+	@media screen and (max-width: 1199px) {
+		.servis-list-item-table__text p:first-child,
+		.servis-list-item-table__text p:last-child {
+			width: 47.5%;
+		}
+		.servis-list-item-table__text {
+			justify-content: space-between;
+		}
+	}
